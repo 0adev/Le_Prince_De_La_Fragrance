@@ -13,7 +13,7 @@ const webPageScroll = () => {
       firstHeroImage.classList.add("rotateX-0");
     };
 
-    if (scrollThreshold > 20) {
+    if (scrollThreshold > 240) {
       removeClasses();
     } else {
       addClasses();
