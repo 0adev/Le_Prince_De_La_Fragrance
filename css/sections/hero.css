@@ -27,7 +27,7 @@
   align-self: start;
   width: 16rem;
   height: 26rem;
-  background-image: url(../assets/hero-img1.jpg);
+  background-image: url(/assets/hero-img1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,7 +83,7 @@
   width: 15rem;
   height: 20rem;
   box-shadow: -2.5rem 2.5rem 3rem #ff902180;
-  background-image: url(../assets/hero-img02.webp);
+  background-image: url(/assets/hero-img02.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
