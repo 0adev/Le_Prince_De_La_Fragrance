@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Noto+Nastaliq+Urdu&display=swap");
+
+/* *other css file imports */
+@import url(sections/hero.css);
+@import url(sections/brand.css);
+@import url(sections/collections.css);
+@import url(sections/order.css);
+@import url(sections/benefits.css);
+@import url(sections/testimonials.css);
+@import url(sections/social-media.css);
+@import url(sections/footer.css);
+
+/* *css variables */
+:root {
+  /* Colors: */
+  --dark-900: #181818;
+  --gray-600: #69727d;
+  --gray-400: #a4a4a4;
+  --gray-300: #c9c9c9;
+  --pink: #cc3366;
+  --yellow: #dfc478;
+  --peach: #dfc478;
+  --brown: #8e482a;
+  --light-peach: #ffeae3;
+  --regular-peach: #fff1d6;
+  --white-100: #ffffff;
+  --white-200: #f3f3f3;
+  --dark-800: #202020;
+  --dark-700: #2d2d2d;
+  --dark-600: #333333;
+  --gray-600: #33373d;
+  --gray-500: #54595f;
+  /* Font : */
+  --primary-ff: "Noto Sans Arabic", sans-serif;
+  --secondary-ff: "Noto Nastaliq Urdu", serif;
+  --marhey-ff: "Marhey", sans-serif;
+  /* Font Weight: */
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semiBold: 600;
+  --bold: 700;
+  /* Font Size: */
+  --fs-100: 0.875rem;
+  --fs-150: 1rem;
+  --fs-200: 1.25rem;
+  --fs-250: 1.5rem;
+  --fs-300: 2rem;
+  --fs-350: 2.25rem;
+  --fs-400: 2.5rem;
+  --fs-600: 3rem;
+  --fs-650: 3.5rem;
+  --fs-700: 4rem;
+}
+
+/* *css reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* *utilities */
+/* text */
+.rtl {
+  direction: rtl;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-deco {
+  text-decoration: none;
+}
+.text-wrap {
+  text-wrap: wrap;
+}
+.text-balance {
+  text-wrap: balance;
+}
+/* text color */
+.text-primary {
+  color: var(--dark-800);
+}
+.text-light {
+  color: var(--white-200);
+}
+.text-dark {
+  color: var(--dark-800);
+}
+/* font */
+.primary-ff {
+  font-family: var(--primary-ff);
+}
+.secondary-ff {
+  font-family: var(--secondary-ff);
+}
+.marhey-ff {
+  font-family: var(--marhey-ff);
+}
+.fs-1 {
+  font-size: var(--fs-100);
+}
+.fs-2 {
+  font-size: var(--fs-150);
+}
+.fs-3 {
+  font-size: var(--fs-200);
+}
+.fs-4 {
+  font-size: var(--fs-250);
+}
+.fs-5 {
+  font-size: var(--fs-300);
+}
+.fs-6 {
+  font-size: var(--fs-350);
+}
+.fs-7 {
+  font-size: var(--fs-400);
+}
+.fs-8 {
+  font-size: var(--fs-600);
+}
+.fs-9 {
+  font-size: var(--fs-650);
+}
+.fs-10 {
+  font-size: var(--fs-700);
+}
+.fw-light {
+  font-weight: var(--light);
+}
+.fw-regular {
+  font-weight: var(--regular);
+}
+.fw-medium {
+  font-weight: var(--medium);
+}
+.fw-semibold {
+  font-weight: var(--semiBold);
+}
+.fw-bold {
+  font-weight: var(--bold);
+}
+
+/* margins */
+.mx-auto--my-0 {
+  margin: 0 auto;
+}
+/* paddings */
+.px {
+  padding-inline: 3rem;
+}
+.py-3 {
+  padding-block: 3rem;
+}
+.padding-1 {
+  padding: 0.75rem;
+}
+.padding-2 {
+  padding: 1.25rem;
+}
+.padding-3 {
+  padding: 1.25rem 1.5rem;
+}
+.padding-4 {
+  padding: 2rem;
+}
+/* display */
+.d-block {
+  display: block;
+}
+.d-grid {
+  display: grid;
+}
+.d-flex {
+  display: flex;
+}
+.d-none {
+  display: none;
+}
+/* flexbox */
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-content-start {
+  justify-content: start;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.justify-content-sp {
+  justify-content: space-between;
+}
+.align-items-start {
+  align-items: start;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: end;
+}
+/* grid */
+.grid-container--fit {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.place-items-start-center {
+  place-items: start center;
+}
+.place-items-start-end {
+  place-items: start end;
+}
+.place-items-start {
+  place-items: start;
+}
+.place-items-center {
+  place-items: center;
+}
+.place-items-end {
+  place-items: end;
+}
+.items-start {
+  align-items: start;
+}
+.items-end {
+  align-items: end;
+}
+.items-center {
+  align-items: center;
+}
+.justify-items-start {
+  justify-items: start;
+}
+.justify-items-end {
+  justify-items: end;
+}
+.justify-items-center {
+  justify-items: center;
+}
+.grid-auto-flow-column {
+  grid-auto-flow: column;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-3 {
+  gap: 1rem;
+}
+.gap-4 {
+  gap: 1.25rem;
+}
+.gap-5 {
+  gap: 1.5rem;
+}
+.gap-6 {
+  gap: 2rem;
+}
+.gap-7 {
+  gap: 2.5rem;
+}
+.gap-8 {
+  gap: 4rem;
+}
+.gap-9 {
+  gap: 5.25rem;
+}
+/* positioning */
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.top-0 {
+  top: 0;
+}
+.right-0 {
+  right: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.left-0 {
+  left: 0;
+}
+/* border */
+.border-1 {
+  border: 1px solid var(--gray-400);
+}
+.border-none {
+  border: none;
+}
+.b-r-rounded {
+  border-radius: 2rem;
+}
+.b-r-rounded-circle {
+  border-radius: 50%;
+}
+/* background */
+.bg-primary {
+  background-color: var(--regular-peach);
+}
+.bg-dark {
+  background-color: var(--dark-900);
+}
+/* width and height */
+.w-100 {
+  width: 100%;
+}
+.w-60 {
+  width: calc(100% - 40%);
+}
+.h-100 {
+  height: 100%;
+}
+/* cursur */
+.cursor-pointer {
+  cursor: pointer;
+}
+/* transition */
+.transition {
+  transition: 150ms ease;
+}
+
+/* general styles */
+body {
+  width: 100%;
+  height: 200vh;
+  background-color: var(--regular-peach);
+}
