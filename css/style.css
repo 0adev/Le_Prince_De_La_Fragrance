@@ -3,14 +3,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Noto+Nastaliq+Urdu&display=swap");
 
 /* *other css file imports */
-@import url(sections/hero.css);
-@import url(sections/brand.css);
-@import url(sections/collections.css);
-@import url(sections/order.css);
-@import url(sections/benefits.css);
-@import url(sections/testimonials.css);
-@import url(sections/social-media.css);
-@import url(sections/footer.css);
+@import url(./sections/hero.css);
+@import url(./sections/brand.css);
+@import url(./sections/collections.css);
+@import url(./sections/order.css);
+@import url(./sections/benefits.css);
+@import url(./sections/testimonials.css);
+@import url(./sections/social-media.css);
+@import url(./sections/footer.css);
 
 /* *css variables */
 :root {
