@@ -7,10 +7,12 @@ const webPageScroll = () => {
   const rotateImage = () => {
     const addClasses = () => {
       firstHeroImage.classList.remove("rotateX-0");
+      return;
     };
 
     const removeClasses = () => {
       firstHeroImage.classList.add("rotateX-0");
+      return;
     };
 
     if (scrollThreshold > 240) {
