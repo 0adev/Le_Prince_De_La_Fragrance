@@ -13,21 +13,15 @@ const webPageScroll = () => {
       firstHeroImage.classList.add("rotateX-0");
     };
 
-    if (scrollThreshold > 240) {
+    if (scrollThreshold > 20) {
       removeClasses();
     } else {
       addClasses();
     }
-
-    console.log(window.scrollY);
   };
 
   // function call
   rotateImage();
 };
 
-// Add event listener for the hamburger menu
-hamburgerMenu.addEventListener("click", openMenu);
-// Add event listener for closing the menu
-closeNavList.addEventListener("click", closeMenu);
 window.addEventListener("scroll", webPageScroll);
