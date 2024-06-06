@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Noto+Nastaliq+Urdu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 /* *other css file imports */
 @import url(./sections/hero.css);
@@ -36,6 +37,7 @@
   --primary-ff: "Noto Sans Arabic", sans-serif;
   --secondary-ff: "Noto Nastaliq Urdu", serif;
   --marhey-ff: "Marhey", sans-serif;
+  --merriweather-ff: "Merriweather", serif;
   /* Font Weight: */
   --light: 300;
   --regular: 400;
@@ -190,6 +192,9 @@ textarea:not([rows]) {
 .marhey-ff {
   font-family: var(--marhey-ff);
 }
+.merriweather-ff {
+  font-family: var(--merriweather-ff);
+}
 .fs-1 {
   font-size: var(--fs-100);
 }
@@ -240,6 +245,9 @@ textarea:not([rows]) {
 .mx-auto--my-0 {
   margin: 0 auto;
 }
+.m-b-start {
+  margin-block-start: 4rem;
+}
 /* paddings */
 .px {
   padding-inline: 3rem;
@@ -275,6 +283,9 @@ textarea:not([rows]) {
 /* flexbox */
 .flex-row {
   flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .flex-column {
   flex-direction: column;
@@ -424,6 +435,10 @@ textarea:not([rows]) {
 /* transition */
 .transition {
   transition: 150ms ease;
+}
+/* overflow */
+.o-hidden {
+  overflow: hidden;
 }
 
 /* general styles */
