@@ -172,6 +172,9 @@ textarea:not([rows]) {
 .text-balance {
   text-wrap: balance;
 }
+.line-h-1 {
+  line-height: 1;
+}
 /* text color */
 .text-primary {
   color: var(--dark-800);

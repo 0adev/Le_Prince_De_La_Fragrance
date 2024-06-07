@@ -1,29 +1,33 @@
-const hero = document.querySelector(".hero");
-const firstHeroImage = hero.querySelector(".first-column .image");
+// Cache the elements
+const navLinks = document.querySelector(".nav-links");
+const menuList = document.querySelector(".menu-list");
+const switcherIcon = document.querySelector(".fa-moon");
 
-const webPageScroll = () => {
-  const scrollThreshold = window.scrollY;
+// Function to toggle the menu
+const doSomthing = (e) => {
+  const target = e.target;
 
-  const rotateImage = () => {
-    const addClasses = () => {
-      firstHeroImage.classList.remove("rotateX-0");
-      return;
-    };
+  const toggleMenu = () => {
+    // Check if the target is the menu or close button
+    const isMenuButton =
+      target.parentElement.classList.contains("hamburger-menu");
+    const isCloseButton = target.classList.contains("close");
 
-    const removeClasses = () => {
-      firstHeroImage.classList.add("rotateX-0");
-      return;
-    };
-
-    if (scrollThreshold > 240) {
-      removeClasses();
-    } else {
-      addClasses();
+    // Toggle menu visibility based on the clicked element
+    if (isMenuButton) {
+      menuList.classList.add("open-menu");
+    } else if (isCloseButton) {
+      menuList.classList.remove("open-menu");
     }
   };
 
-  // function call
-  rotateImage();
+  // const darkMode = () => {
+
+  // };
+
+  toggleMenu();
+  // darkMode();
 };
 
-window.addEventListener("scroll", webPageScroll);
+// Attach event listener using event delegation
+navLinks.addEventListener("click", doSomthing);
