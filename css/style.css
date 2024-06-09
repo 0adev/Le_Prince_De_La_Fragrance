@@ -166,6 +166,11 @@ textarea:not([rows]) {
 .text-deco {
   text-decoration: none;
 }
+
+.text-underline {
+  text-decoration: underline;
+}
+
 .text-wrap {
   text-wrap: wrap;
 }
@@ -447,6 +452,8 @@ textarea:not([rows]) {
 /* general styles */
 body {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
   background-color: var(--regular-peach);
+  position: relative;
 }

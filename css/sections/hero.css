@@ -1,4 +1,13 @@
 /* header */
+.primary-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.071);
+  backdrop-filter: blur(50px);
+  z-index: 99;
+}
+
 .primary-header .nav-links ul {
   width: 100%;
 }
@@ -88,7 +97,8 @@
 }
 
 /* hovring styles */
-.primary-header .nav-links a:not(.primary-btn, .socialm-icon):hover {
+.primary-header .nav-links a:not(.primary-btn, .socialm-icon):hover,
+.primary-header .nav-links .close:hover {
   color: var(--brown);
 }
 
@@ -149,7 +159,7 @@
 
   .primary-header .nav-links .hamburger-menu {
     display: block;
-    line-height: 1;
+    width: 1.15rem;
   }
 
   .primary-header .nav-links .menu-list.open-menu {
@@ -159,15 +169,22 @@
     width: calc(100% - 10rem);
     height: 30rem;
     padding-block: 3rem;
-    background-color: rgba(255, 255, 255, 0.146);
-    backdrop-filter: blur(50px);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(
+      45deg,
+      rgb(255, 240, 201) 0%,
+      rgb(253, 244, 223) 100%
+    );
+    box-shadow: 0 0 100px rgba(85, 85, 85, 0.145);
     position: fixed;
-    top: 50%;
+    top: 28rem;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
     border-radius: 30px;
+  }
+
+  .menu-list .socialm-icon img {
+    width: 1rem;
   }
 
   .primary-header .nav-links ul {

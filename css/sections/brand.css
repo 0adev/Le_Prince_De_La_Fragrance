@@ -6,7 +6,6 @@ main .brands > .brand-slider {
   width: 90%;
   height: 8.125rem;
   margin-inline: auto;
-  /* max-width: 1536px;*/
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(
@@ -84,6 +83,6 @@ main .brand-slider .item10 {
 
 @media (max-width: 50rem) {
   main .brand-slider .item {
-    left: max(calc(150px * 10), 100%);
+    left: max(calc(180px * 10), 100%);
   }
 }

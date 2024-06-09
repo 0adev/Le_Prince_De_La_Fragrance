@@ -1,33 +1,31 @@
-// Cache the elements
+const primaryHeader = document.querySelector(".primary-header");
 const navLinks = document.querySelector(".nav-links");
 const menuList = document.querySelector(".menu-list");
-const switcherIcon = document.querySelector(".fa-moon");
 
-// Function to toggle the menu
-const doSomthing = (e) => {
+// favIcon dark theme
+
+const screenwidth = window.innerWidth;
+let largeScreenMin = 800;
+const largeScreenMax = 1524;
+let smallScreenMax = 796;
+const scrollThreshold = window.scrollY;
+
+// toggle menu
+const handleNavClick = (e) => {
   const target = e.target;
+  const parentClassList = target.parentElement.classList;
+  const targetClassList = target.classList;
 
-  const toggleMenu = () => {
-    // Check if the target is the menu or close button
-    const isMenuButton =
-      target.parentElement.classList.contains("hamburger-menu");
-    const isCloseButton = target.classList.contains("close");
-
-    // Toggle menu visibility based on the clicked element
-    if (isMenuButton) {
-      menuList.classList.add("open-menu");
-    } else if (isCloseButton) {
-      menuList.classList.remove("open-menu");
-    }
-  };
-
-  // const darkMode = () => {
-
-  // };
-
-  toggleMenu();
-  // darkMode();
+  if (parentClassList.contains("hamburger-menu")) {
+    e.preventDefault();
+    menuList.classList.add("open-menu");
+    return;
+  } else if (targetClassList.contains("close")) {
+    e.preventDefault();
+    menuList.classList.remove("open-menu");
+    return;
+  }
 };
 
-// Attach event listener using event delegation
-navLinks.addEventListener("click", doSomthing);
+// Event Listeners
+navLinks.addEventListener("click", handleNavClick);

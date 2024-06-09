@@ -8,22 +8,20 @@
       content="متجرإلكتروني للعطور تباع و توزع في كل أنحاء المغرب."
     />
     <title>Le Prince De La Fragrance</title>
-    <!-- head icon -->
+    <!-- favIcon -->
     <link
       rel="shortcut icon"
       href="./assets/logo-white.webp"
       type="image/x-icon"
+      id="faviconTag"
+    />
+    <link
+      rel="icon"
+      href="assets/logo-white.webp"
+      media="(prefers-color-scheme: dark)"
     />
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
   <body class="rtl primary-ff">
     <!-- header Start -->
@@ -32,10 +30,11 @@
         <!-- hamburger menu start-->
         <a
           href="#"
-          class="hamburger-menu | fs-3 text-primary d-none cursor-pointer"
+          class="hamburger-menu | d-none cursor-pointer"
           title="Open main menu"
         >
-          <i class="fa-solid fa-bars"></i>
+          <!-- <i class="fa-solid fa-bars"></i> -->
+          <img src="./assets/bars-solid.svg" alt="" />
         </a>
 
         <div class="menu-list d-none">
@@ -64,29 +63,39 @@
             class="primary-btn | text-deco text-light fs-1 fw-medium bg-dark border-none padding-3 b-r-rounded cursor-pointer transition"
             >اطلب عطرك المفضل الان</a
           >
-          <a
-            href="#"
-            class="close text-primary line-h-1 fs-1 fw-semibold transition"
+          <span
+            class="close text-primary line-h-1 fs-1 fw-semibold cursor-pointer text-underline transition"
             title="Close Main Menu"
-            >X Close Menu</a
+            >X Close Menu</span
           >
 
-          <div class="social-media d-flex gap-2">
+          <div class="social-media d-flex align-items-center gap-3">
             <a
-              href="https://web.whatsapp.com/send?text=&amp;phone=212655398455"
+              href="#facebook"
+              target="_blank"
+              class="socialm-icon text-deco text-primary"
+              title="Whatsapp"
+            >
+              <!-- <i class="fa-brands fa-square-facebook"></i> -->
+              <img src="./assets/square-facebook.svg" alt="" />
+            </a>
+            <a
+              href="#whatsapp"
               target="_blank"
               class="socialm-icon text-deco fs-2 text-primary"
               title="Whatsapp"
             >
-              <i class="fa-brands fa-whatsapp"></i>
+              <!-- <i class="fa-brands fa-whatsapp"></i> -->
+              <img src="./assets/whatsapp.svg" alt="" />
             </a>
             <a
-              href="https://www.instagram.com/princedelafragrance/"
+              href="#instagram"
               target="_blank"
               class="socialm-icon text-deco fs-2 text-primary"
               title="Instagram"
             >
-              <i class="fa-brands fa-instagram"></i>
+              <!-- <i class="fa-brands fa-instagram"></i> -->
+              <img src="./assets/instagram.svg" alt="" />
             </a>
           </div>
         </div>
@@ -96,9 +105,6 @@
           role="list"
           class="list-item d-flex align-items-end justify-content-center gap-8"
         >
-          <li class="light-switcher text-primary fs-2">
-            <i class="fa-solid fa-moon" title="turn on the dark mode"></i>
-          </li>
           <li>
             <a
               href="index.html"
