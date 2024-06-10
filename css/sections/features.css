@@ -25,6 +25,8 @@ main .features .feature-img .icon {
   top: -2.25rem;
   right: -1.25rem;
   width: 6rem;
+  height: 6rem;
+  object-fit: cover;
   background-color: #ffffff00;
   backdrop-filter: blur(50px);
   border-radius: 50%;
