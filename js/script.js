@@ -1,14 +1,7 @@
 const primaryHeader = document.querySelector(".primary-header");
 const navLinks = document.querySelector(".nav-links");
 const menuList = document.querySelector(".menu-list");
-
-// favIcon dark theme
-
-const screenwidth = window.innerWidth;
-let largeScreenMin = 800;
-const largeScreenMax = 1524;
-let smallScreenMax = 796;
-const scrollThreshold = window.scrollY;
+const featuresImgFrame = document.querySelector(".features .image");
 
 // toggle menu
 const handleNavClick = (e) => {
@@ -27,5 +20,31 @@ const handleNavClick = (e) => {
   }
 };
 
+// features section
+
+const handleWindowScroll = () => {
+  const scrollY = window.scrollY;
+  const screenwidth = window.innerWidth;
+  let largeScreenMin = 800;
+  const largeScreenMax = 1524;
+  let smallScreenMax = 796;
+
+  const featuresSection = () => {
+    if (scrollY > 1986) {
+      featuresImgFrame.style.backgroundImage = "url(./assets/hero-img1.jpg)";
+    } else if (scrollY > 1308) {
+      featuresImgFrame.style.backgroundImage =
+        "url(./assets/features-img02.jpg)";
+    } else {
+      featuresImgFrame.style.backgroundImage =
+        "url(./assets/features-img01.jpg)";
+    }
+    return;
+  };
+
+  featuresSection();
+};
+
 // Event Listeners
+window.addEventListener("scroll", handleWindowScroll);
 navLinks.addEventListener("click", handleNavClick);

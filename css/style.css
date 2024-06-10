@@ -6,6 +6,7 @@
 /* *other css file imports */
 @import url(./sections/hero.css);
 @import url(./sections/brand.css);
+@import url(./sections/features.css);
 @import url(./sections/collections.css);
 @import url(./sections/order.css);
 @import url(./sections/benefits.css);
@@ -24,6 +25,8 @@
   --yellow: #dfc478;
   --peach: #dfc478;
   --brown: #8e482a;
+  --beige-700: #8f7a5e;
+  --dark-brown: #462b0d;
   --light-peach: #ffeae3;
   --regular-peach: #fff1d6;
   --white-100: #ffffff;
@@ -190,6 +193,12 @@ textarea:not([rows]) {
 .text-dark {
   color: var(--dark-800);
 }
+.text-beige {
+  color: var(--beige-700);
+}
+.text-brown {
+  color: var(--dark-brown);
+}
 /* font */
 .primary-ff {
   font-family: var(--primary-ff);
@@ -319,6 +328,9 @@ textarea:not([rows]) {
 .align-items-end {
   align-items: end;
 }
+.order-1 {
+  order: 1;
+}
 /* grid */
 .grid-container--fit {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -387,12 +399,18 @@ textarea:not([rows]) {
 .gap-9 {
   gap: 5.25rem;
 }
+.gap-10 {
+  gap: 8rem;
+}
 /* positioning */
 .position-relative {
   position: relative;
 }
 .position-absolute {
   position: absolute;
+}
+.position-sticky {
+  position: sticky;
 }
 .top-0 {
   top: 0;
@@ -456,4 +474,8 @@ body {
   min-height: 100vh;
   background-color: var(--regular-peach);
   position: relative;
+}
+
+main .container {
+  margin-block: 3rem;
 }
