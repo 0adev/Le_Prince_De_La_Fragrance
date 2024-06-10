@@ -168,17 +168,31 @@
     min-width: calc(100% - 10rem);
     height: 30rem;
     padding: 3rem 0.875rem;
-    background: linear-gradient(
-      45deg,
-      rgb(255, 240, 201) 0%,
-      rgb(253, 244, 223) 100%
-    );
-    box-shadow: 0 0 100px rgba(85, 85, 85, 0.145);
+    background-color: rgb(255, 239, 214);
+    background-image: radial-gradient(
+        at 59% 98%,
+        rgba(255, 247, 226, 0.701) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 97% 43%,
+        rgba(255, 234, 220, 0.895) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 40% 20%, rgb(255, 245, 231) 0px, transparent 50%),
+      radial-gradient(
+        at 0% 50%,
+        hsla(22, 100%, 90%, 0.953) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 0% 100%, rgb(255, 233, 205) 0px, transparent 50%);
+    box-shadow: 8px 8px 0 var(--dark-600);
     position: fixed;
     top: 28rem;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
+    border: 1px solid var(--dark-700);
     border-radius: 30px;
   }
 

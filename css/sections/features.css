@@ -16,6 +16,21 @@ main .features .image {
   transition: 300ms ease;
 }
 
+main .features .feature-img {
+  position: relative;
+}
+
+main .features .feature-img .icon {
+  position: absolute;
+  top: -2.25rem;
+  right: -1.25rem;
+  width: 6rem;
+  background-color: #ffffff00;
+  backdrop-filter: blur(50px);
+  border-radius: 50%;
+  display: none;
+}
+
 main .features p {
   width: 23ch;
   font-size: 1.875rem;
@@ -46,9 +61,16 @@ main .features p {
 
   main .features .frame img {
     display: block;
-    width: 16rem;
+    width: 23rem;
+    aspect-ratio: 3 / 3.25;
+    object-fit: cover;
     border-radius: 20px;
   }
+
+  main .features .feature-img .icon {
+    display: block;
+  }
+
   main .features .frame .feature {
     display: grid;
     place-items: center;
