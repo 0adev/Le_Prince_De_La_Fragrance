@@ -63,15 +63,15 @@ const handleWindowScroll = () => {
     const smallScreen = () => {
       const scrollY = window.scrollY;
 
-      if (scrollY > 810) {
+      if (scrollY > 770) {
         featuresImgFrameSmall[0].classList.add("translateX-0");
         featuresIconSmall[0].classList.add("translateX-0");
       }
-      if (scrollY > 1450) {
+      if (scrollY > 1410) {
         featuresImgFrameSmall[1].classList.add("translateX-0");
         featuresIconSmall[1].classList.add("translateX-0");
       }
-      if (scrollY > 2050) {
+      if (scrollY > 2010) {
         featuresImgFrameSmall[2].classList.add("translateX-0");
         featuresIconSmall[2].classList.add("translateX-0");
       }
