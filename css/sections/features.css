@@ -1,5 +1,13 @@
 /* styles */
 main .features {
+  margin-block-start: 5rem;
+}
+
+main .features .section-heading h2 {
+  font-size: clamp(var(--fs-300), 4vw, var(--fs-600));
+}
+
+main .features .container {
   width: calc(100% - 10rem);
   min-height: 120rem;
   margin: 8rem auto;
@@ -14,6 +22,18 @@ main .features .image {
   border-radius: 180px;
   top: 8rem;
   transition: 300ms ease;
+  animation: upDown 1500ms alternate infinite;
+}
+
+main .features .image > .feature-icon {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 7rem;
+  backdrop-filter: blur(50px);
+  transition: 200ms ease;
 }
 
 main .features .feature-img {
@@ -39,8 +59,21 @@ main .features p {
   color: var(--gray-600);
 }
 
+/* animation start*/
+
+@keyframes upDown {
+  from {
+    transform: rotate(6deg) translateY(20px);
+  }
+  to {
+    transform: rotate(6deg) translateY(0);
+  }
+}
+
+/* animation end */
+
 @media (max-width: 62.125rem) {
-  main .features {
+  main .features .container {
     width: calc(100% - 4rem);
     min-height: 120rem;
     margin: 8rem auto;
@@ -54,23 +87,16 @@ main .features p {
 
 @media (max-width: 50rem) {
   main .features {
+    overflow: hidden;
+  }
+
+  main .features .container {
     min-height: 50rem;
   }
 
   main .features .image {
     display: none;
-  }
-
-  main .features .frame img {
-    display: block;
-    width: 23rem;
-    aspect-ratio: 3 / 3.25;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-
-  main .features .feature-img .icon {
-    display: block;
+    animation: none;
   }
 
   main .features .frame .feature {
@@ -79,8 +105,35 @@ main .features p {
     gap: 3rem;
   }
 
+  main .features .frame img:first-of-type {
+    display: block;
+    width: 23rem;
+    aspect-ratio: 3 / 3.25;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  main .features .frame .feature-img .icon {
+    display: block;
+  }
+
+  main .features .frame .feature img {
+    transform: translateX(-200px);
+    transition: 500ms ease;
+    opacity: 0;
+  }
+  main .features .frame .second-feature img {
+    transform: translateX(200px);
+  }
+
   main .features .content {
     text-align: center;
     gap: 1.25rem;
   }
+}
+
+/* utilities */
+main .features .frame .feature-img img.translateX-0 {
+  transform: translateX(0);
+  opacity: 1;
 }

@@ -1,7 +1,18 @@
 const primaryHeader = document.querySelector(".primary-header");
 const navLinks = document.querySelector(".nav-links");
 const menuList = document.querySelector(".menu-list");
-const featuresImgFrame = document.querySelector(".features .image");
+const featuresImgFrameLarge = document.querySelector(".features .image");
+const featuresIconLarge = document.querySelector(".features .feature-icon");
+const featuresImgFrameSmall = [
+  document.querySelector(".first-feature img:first-of-type"),
+  document.querySelector(".second-feature img:first-of-type"),
+  document.querySelector(".third-feature img:first-of-type"),
+];
+const featuresIconSmall = [
+  document.querySelector(".first-feature .icon"),
+  document.querySelector(".second-feature .icon"),
+  document.querySelector(".third-feature .icon"),
+];
 
 // toggle menu
 const handleNavClick = (e) => {
@@ -30,16 +41,47 @@ const handleWindowScroll = () => {
   let smallScreenMax = 796;
 
   const featuresSection = () => {
-    if (scrollY > 1986) {
-      featuresImgFrame.style.backgroundImage = "url(./assets/hero-img1.jpg)";
-    } else if (scrollY > 1308) {
-      featuresImgFrame.style.backgroundImage =
-        "url(./assets/features-img02.jpg)";
-    } else {
-      featuresImgFrame.style.backgroundImage =
-        "url(./assets/features-img01.jpg)";
+    const largeScreen = () => {
+      if (scrollY > 2150) {
+        featuresImgFrameLarge.style.backgroundImage =
+          "url(./assets/hero-img1.jpg)";
+        featuresIconLarge.style.backgroundImage =
+          "url(./assets/perfume-svgrepo-com.svg)";
+      } else if (scrollY > 1508) {
+        featuresImgFrameLarge.style.backgroundImage =
+          "url(./assets/features-img02.jpg)";
+        featuresIconLarge.style.backgroundImage =
+          "url(./assets/quality-medal-.svg)";
+      } else {
+        featuresImgFrameLarge.style.backgroundImage =
+          "url(./assets/features-img01.jpg)";
+        featuresIconLarge.style.backgroundImage =
+          "url(./assets/timer-forward-.svg)";
+      }
+    };
+
+    const smallScreen = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 810) {
+        featuresImgFrameSmall[0].classList.add("translateX-0");
+        featuresIconSmall[0].classList.add("translateX-0");
+      }
+      if (scrollY > 1450) {
+        featuresImgFrameSmall[1].classList.add("translateX-0");
+        featuresIconSmall[1].classList.add("translateX-0");
+      }
+      if (scrollY > 2050) {
+        featuresImgFrameSmall[2].classList.add("translateX-0");
+        featuresIconSmall[2].classList.add("translateX-0");
+      }
+    };
+
+    if (screenwidth <= largeScreenMax && screenwidth >= largeScreenMin) {
+      largeScreen();
+    } else if (screenwidth <= smallScreenMax) {
+      smallScreen();
     }
-    return;
   };
 
   featuresSection();
