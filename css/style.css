@@ -22,6 +22,7 @@
   --gray-400: #a4a4a4;
   --gray-300: #c9c9c9;
   --pink: #cc3366;
+  --red: #db3a15;
   --yellow: #dfc478;
   --peach: #dfc478;
   --brown: #8e482a;
@@ -200,6 +201,9 @@ textarea:not([rows]) {
 }
 .text-brown {
   color: var(--dark-brown);
+}
+.text-red {
+  color: var(--red);
 }
 /* font */
 .primary-ff {

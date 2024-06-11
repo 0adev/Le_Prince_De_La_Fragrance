@@ -85,6 +85,8 @@ const handleWindowScroll = () => {
   } else if (screenwidth <= smallScreenMax) {
     updateSmallScreen();
   }
+  updateLargeScreen();
+  updateSmallScreen();
 };
 
 // Event Listeners

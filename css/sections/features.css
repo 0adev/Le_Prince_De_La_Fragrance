@@ -3,6 +3,12 @@ main .features {
   margin-block-start: 5rem;
 }
 
+main .features .section-heading div {
+  background-color: #ffe5c3;
+  padding: 0.5rem 0.875rem;
+  border-radius: 30px;
+}
+
 main .features .section-heading h2 {
   font-size: clamp(var(--fs-300), 4vw, var(--fs-600));
 }
