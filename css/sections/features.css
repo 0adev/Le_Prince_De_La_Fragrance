@@ -81,7 +81,8 @@ main .features p {
 @media (max-width: 62.125rem) {
   main .features .container {
     width: calc(100% - 4rem);
-    margin: 5rem auto;
+    margin-inline: auto;
+    margin-block: 5rem 8rem;
   }
 
   main .features p {
