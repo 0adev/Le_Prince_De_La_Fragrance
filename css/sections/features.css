@@ -16,7 +16,7 @@ main .features .section-heading h2 {
 main .features .container {
   width: calc(100% - 10rem);
   min-height: 120rem;
-  margin: 8rem auto;
+  margin: 6rem auto;
 }
 
 main .features .image {
@@ -81,13 +81,12 @@ main .features p {
 @media (max-width: 62.125rem) {
   main .features .container {
     width: calc(100% - 4rem);
-    min-height: 120rem;
-    margin: 8rem auto;
+    margin: 5rem auto;
   }
 
   main .features p {
     width: initial;
-    font-size: clamp(var(--fs-200), 3vw, var(--fs-300));
+    font-size: clamp(var(--fs-200), 3vw, var(--fs-250));
   }
 }
 
@@ -113,7 +112,7 @@ main .features p {
 
   main .features .frame img:first-of-type {
     display: block;
-    width: 23rem;
+    width: 16rem;
     aspect-ratio: 3 / 3.25;
     object-fit: cover;
     border-radius: 20px;
@@ -135,6 +134,12 @@ main .features p {
   main .features .content {
     text-align: center;
     gap: 1.25rem;
+  }
+}
+
+@media (max-width: 34rem) {
+  main .features > .container {
+    width: calc(100% - 6rem);
   }
 }
 
