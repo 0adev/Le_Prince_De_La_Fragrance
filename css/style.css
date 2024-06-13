@@ -177,6 +177,9 @@ textarea:not([rows]) {
   text-decoration: underline;
 }
 
+.text-nowrap {
+  text-wrap: nowrap;
+}
 .text-wrap {
   text-wrap: wrap;
 }
@@ -484,4 +487,14 @@ body {
 
 main .container {
   margin-block: 3rem;
+}
+
+main .container .section-heading {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 500ms ease;
+}
+main .container .section-heading.translateY-0 {
+  transform: translateY(0);
+  opacity: 1;
 }

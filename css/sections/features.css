@@ -1,6 +1,6 @@
 /* styles */
 main .features {
-  margin-block-start: 5rem;
+  margin-block: 8rem 5rem;
 }
 
 main .features .section-heading div {
@@ -81,8 +81,7 @@ main .features p {
 @media (max-width: 62.125rem) {
   main .features .container {
     width: calc(100% - 4rem);
-    margin-inline: auto;
-    margin-block: 5rem 8rem;
+    margin: 5rem auto;
   }
 
   main .features p {
@@ -94,10 +93,12 @@ main .features p {
 @media (max-width: 50rem) {
   main .features {
     overflow: hidden;
+    gap: 3rem;
   }
 
   main .features .container {
-    min-height: 50rem;
+    margin-block: 2rem;
+    min-height: 100%;
   }
 
   main .features .image {
@@ -108,7 +109,7 @@ main .features p {
   main .features .frame .feature {
     display: grid;
     place-items: center;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   main .features .frame img:first-of-type {
@@ -139,6 +140,9 @@ main .features p {
 }
 
 @media (max-width: 34rem) {
+  main .features {
+    margin-block: 3rem;
+  }
   main .features > .container {
     width: calc(100% - 6rem);
   }
