@@ -9,7 +9,6 @@ const featuresImgFrameSmall = document.querySelectorAll(
 );
 const featuresIconSmall = document.querySelectorAll(".feature .icon");
 const sectionHeading = document.querySelectorAll(".section-heading");
-console.log(sectionHeading);
 
 // Toggle menu
 const handleNavClick = (e) => {
