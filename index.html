@@ -217,6 +217,9 @@
             <div class="item item10 text-center">
               <img src="./assets/armani.webp" alt="" />
             </div>
+            <div class="item item11 text-center">
+              <img src="./assets/jpg.jpg" alt="" />
+            </div>
           </div>
         </div>
         <!-- brands end -->
@@ -225,7 +228,7 @@
           <div
             class="section-heading d-grid place-items-center gap-4 text-center"
           >
-            <div class="fs-2 fw-semibold text-beige">لماذا أخترتنا؟</div>
+            <div class="fs-2 fw-semibold text-orange">لماذا أخترتنا؟</div>
             <h2 class="fs-8 text-primary fw-semibold">ميزاتنا الأساسية</h2>
           </div>
           <div
@@ -306,54 +309,223 @@
         </div>
         <!-- features end -->
         <!-- collection start -->
-        <div class="collection d-grid gap-7" id="collection">
+        <div class="collection d-grid" id="collection">
           <div
             class="section-heading d-grid place-items-center gap-4 text-center"
           >
-            <div class="fs-2 fw-semibold text-beige">قائمة العطور</div>
+            <div class="fs-2 fw-semibold text-orange">قائمة العطور</div>
             <h2 class="fs-8 text-primary fw-semibold">استمتع بأرقى الروائح</h2>
           </div>
 
           <div
-            class="container d-flex justify-content-center align-items-center gap-8"
+            class="container d-flex justify-content-center align-items-center gap-7"
           >
-            <div class="men position-relative o-hidden">
-              <div class="card-cover">
-                <img src="./assets/men-collection-img.jpg" alt="" />
-              </div>
-              <div class="card-content w-100">
-                <h3
-                  class="fs-6 fw-medium secondary-ff text-light text-nowrap position-absolute top-0"
-                >
-                  عطور رجالية
-                </h3>
-                <a
-                  href="#"
-                  class="text-light fw-medium fs-2 text-deco position-absolute d-flex gap-2"
-                  >قائمة العطور <img src="./assets/arrow-down.svg" alt=""
-                /></a>
+            <!-- men collection -->
+            <div class="men position-relative">
+              <div class="container position-relative o-hidden w-100">
+                <div class="card-cover">
+                  <img src="./assets/men-collection-img.jpg" alt="" />
+                </div>
+                <div class="card-content w-100">
+                  <h3
+                    class="fs-6 fw-medium secondary-ff text-light text-nowrap position-absolute top-0"
+                  >
+                    عطور رجالية
+                  </h3>
+                  <a
+                    href="#"
+                    class="text-light fw-medium fs-2 text-deco position-absolute d-flex gap-2"
+                    >قائمة العطور <img src="./assets/arrow-down.svg" alt=""
+                  /></a>
+                </div>
               </div>
             </div>
-            <div class="women position-relative o-hidden">
-              <div class="card-cover">
-                <img src="./assets/women-collection-img.jpg" alt="" />
-              </div>
-              <div class="card-content w-100">
-                <h3
-                  class="fs-10 fw-medium secondary-ff text-primary text-nowrap position-absolute top-0"
-                >
-                  عطور نسائية
-                </h3>
-                <a
-                  href="#"
-                  class="text-light fw-medium fs-2 text-deco position-absolute d-flex gap-2"
-                  >قائمة العطور <img src="./assets/arrow-down.svg" alt=""
-                /></a>
+            <!-- women collection -->
+            <div class="women">
+              <div class="container position-relative o-hidden w-100">
+                <div class="card-cover">
+                  <img src="./assets/women-collection-img.jpg" alt="" />
+                </div>
+                <div class="card-content w-100">
+                  <h3
+                    class="fs-10 fw-medium secondary-ff text-primary text-nowrap position-absolute top-0"
+                  >
+                    عطور نسائية
+                  </h3>
+                  <a
+                    href="#"
+                    class="text-light fw-medium fs-2 text-deco position-absolute d-flex gap-2"
+                    >قائمة العطور <img src="./assets/arrow-down.svg" alt=""
+                  /></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <!-- collection end -->
+        <!-- order start -->
+        <div class="order" id="order">
+          <!-- order title -->
+          <div
+            class="section-heading d-grid place-items-center gap-4 text-center"
+          >
+            <div class="fs-2 fw-semibold text-orange">طلب المنتج</div>
+            <h2 class="fs-8 text-primary fw-semibold">عطرك المفضل بانتظارك</h2>
+          </div>
+
+          <!-- order form container -->
+          <div class="container w-100 d-flex">
+            <!-- left side (image) -->
+            <div
+              class="left-side w-100"
+              style="background-image: url(./assets/form-img.webp)"
+            ></div>
+
+            <!-- right side (form) -->
+            <div class="right-side w-100 d-grid place-items-center">
+              <!-- form title -->
+              <div class="title d-grid place-items-center gap-1">
+                <h3
+                  class="marhey-ff fs-9 text-primary fw-medium text-center text-beige-700"
+                >
+                  اطلب الآن
+                </h3>
+                <p class="markazi-ff fs-5 fw-medium text-center text-brown">
+                  لا تفوت فرصة اقتناء أجمل الروائح
+                </p>
+              </div>
+              <!-- form logo -->
+              <div
+                class="logo w-100 d-flex align-items-center justify-content-center position-relative"
+              >
+                <img src="./assets/logo.webp" alt="" />
+              </div>
+              <form class="w-100 d-grid gap-2">
+                <!-- parfume offer -->
+                <div class="perfumes-offer d-grid gap-3 primary-ff">
+                  <label
+                    class="primary-ff fw-medium fs-2 text-primary cursor-pointer"
+                    for="offer"
+                    >إختر العرض :</label
+                  >
+                  <select name="offer" id="offer">
+                    <option
+                      class="primary-ff fw-medium fs-2 text-primary"
+                      value="اختر العرض الخاص بك"
+                    >
+                      اختر العرض الخاص بك
+                    </option>
+                    <option
+                      class="primary-ff fw-medium fs-2 text-primary"
+                      value="2 عطور + 1 عطر هدية  🎁  = 199 درهم "
+                    >
+                      2 عطور + 1 عطر هدية 🎁 = 199 درهم
+                    </option>
+                    <option
+                      class="primary-ff fw-medium fs-2 text-primary"
+                      value="3 عطور + 2 عطور هدية 🎁  = 249 درهم"
+                    >
+                      3 عطور + 2 عطور هدية 🎁 = 249 درهم
+                    </option>
+                    <option
+                      class="primary-ff fw-medium fs-2 text-primary"
+                      value="5 عطور + 2 عطور هدية 🎁  = 349 درهم"
+                    >
+                      5 عطور + 2 عطور هدية 🎁 = 349 درهم
+                    </option>
+                  </select>
+                </div>
+                <!-- perfume name feild -->
+                <label
+                  class="primary-ff fw-medium fs-2 text-primary cursor-pointer"
+                  for="perfume-name"
+                  >اسم العطر :</label
+                >
+                <input
+                  type="text"
+                  placeholder="أدخل اسم العطر"
+                  name="perfume-name"
+                  id="perfume-name"
+                  required
+                />
+                <!-- user name feild -->
+                <div class="user-name-phone d-flex gap-5 w-100">
+                  <div class="name d-grid gap-2 w-100">
+                    <label
+                      class="primary-ff fw-medium fs-2 text-primary cursor-pointer"
+                      for="user-name"
+                      >الاسم الكامل :</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="أدخل اسمك الكامل"
+                      name="user-name"
+                      id="user-name"
+                      required
+                    />
+                  </div>
+                  <!-- phone number feild -->
+                  <div class="phone-number d-grid gap-2 w-100">
+                    <label
+                      class="primary-ff fw-medium fs-2 text-primary cursor-pointer"
+                      for="user-phone"
+                      >رقم الهاتف :</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="أدخل رقم هاتفك"
+                      name="user-phone"
+                      id="user-phone"
+                      required
+                    />
+                  </div>
+                </div>
+                <!-- city feild -->
+                <label
+                  class="primary-ff fw-medium fs-2 text-primary cursor-pointer"
+                  for="user-city"
+                  >المدينة :</label
+                >
+                <input
+                  type="text"
+                  placeholder="أدخل اسم مدينتك"
+                  name="user-city"
+                  id="user-city"
+                  required
+                />
+                <!-- address feild -->
+                <label
+                  class="primary-ff fw-medium fs-2 text-primary cursor-pointer"
+                  for="user-address"
+                  >العنوان :</label
+                >
+                <input
+                  type="text"
+                  placeholder="أدخل عنوانك"
+                  name="user-address"
+                  id="user-address"
+                  required
+                />
+                <!-- Submite Button -->
+                <button
+                  type="submit"
+                  class="submit-btn w-100 primary-ff fs-2 fw-medium text-primary cursor-pointer"
+                >
+                  أرسل طلبك
+                </button>
+                <!-- Note -->
+                <div class="note">
+                  <p class="text-center markazi-ff fw-medium fs-2 line-h-1-2">
+                    ملحوظة: مع مراعاة المحافظة على البيئة، نحيط علم زبنائنا
+                    الكرام أنه بعد تفريغ زجاجات العطر، يرجى إعلامنا ليستلمها
+                    المسؤول عن التسليم.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- order end -->
       </div>
       <!-- main container end -->
     </main>
